@@ -1,0 +1,17 @@
+<div>
+  <div><span>Welcome</span></div>
+  <div *ngIf="userClaims">
+    <div>
+    <span>Name: {{userClaims.data.fname}} {{userClaims.data.lname}}</span>
+  </div>
+  <div>    <span>Role: {{userClaims.data.role}}</span>
+  </div>
+<div>
+    <span>Email: {{userClaims.data.email}}</span>
+  </div>
+  </div>
+</div>
+<div>
+  
+<button (click)="logout()">Logout</button>
+  </div>

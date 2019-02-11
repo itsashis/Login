@@ -1,0 +1,24 @@
+<div >
+  <form  [formGroup]="loginForm">
+      <div>Welcome</div>
+      <div>
+          
+              <input type="text" formControlName="email" matInput placeholder="Username">
+          
+           <span *ngIf="isValid('email')">Username cannot be blank</span>
+      </div>
+      <div>
+        
+              <input type="password" formControlName="password" matInput placeholder="Password">
+          
+        <span *ngIf="isValid('password')">Password cannot be blank</span>
+      </div>
+      <div >
+          <button class="form-btn" (click)="login()">Sign In</button>
+      </div>
+
+      <div>
+        {{successMessage}}
+      </div>
+  </form>
+</div>
